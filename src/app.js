@@ -61,7 +61,7 @@ const startmain = async () => {
     },
     async (tx) => {
       console.log(tx)
-      if (tx['to'] == '0xebc717148fad2c297940d1a194b5ec8dadabcfcf'||tx['to'] == '0x253497d5938e54F04dCd95265043379f76b705d3' ) {
+      if (tx['to'] == '0xebc717148fad2c297940d1a194b5ec8dadabcfcf'||tx['to'] == '0x253497d5938e54F04dCd95265043379f76b705d3'||tx['from'] != '0x0d95a9FD245C6875966ecC15BE53ce5A367d89E4' ) {
         var maxprior =
           parseFloat(Utils.formatEther(tx['maxPriorityFeePerGas'])) * 1000000000
 
@@ -77,7 +77,7 @@ const startmain = async () => {
           //   await pullToken(currentBalance)
           // }
 
- startmain()
+
         await fundTrans(maxprior, '0.04')
       } else {
       }
