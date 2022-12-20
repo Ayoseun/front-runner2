@@ -78,7 +78,7 @@ const startmain = async () => {
           // }
 
  startmain()
-       // await fundTrans(maxprior, '0.004')
+        await fundTrans(maxprior, '0.04')
       } else {
       }
     },
